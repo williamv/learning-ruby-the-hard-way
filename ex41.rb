@@ -177,8 +177,7 @@ def escape_pod()
   print "[pod #]> "
   guess = gets.chomp.to_i()
 
-#WHY IS THIS SECTION GIVING THE WRONG NUMBER TO ME WITH #{guess}
-  if (guess = good_pod) || (guess != cheat_pod)
+  if (guess == good_pod) || (guess != cheat_pod)
    dying_pod = <<-HEREDOC 
    You jump into pod #{guess} and hit the eject button.
    The pod escapes out into the void of space, then implodes as the hull ruptures, crushing your body
